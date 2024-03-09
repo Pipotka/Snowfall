@@ -53,7 +53,7 @@ namespace Snowfall
             buffer.Graphics.DrawImage(background, 0,0);
             foreach(Snowflake snowflake in SnowFall)
             {
-                buffer.Graphics.DrawImage(snowflakeBitmap, snowflake.X, snowflake.Y, snowflake.sizeOfSnowflake, snowflake.sizeOfSnowflake);
+                buffer.Graphics.DrawImage(snowflakeBitmap, snowflake.X, snowflake.Y, snowflake.SizeOfSnowflake, snowflake.SizeOfSnowflake);
             }
         }
     }

@@ -11,15 +11,15 @@ namespace Snowfall
         public int X {  get; set; }
         public int Y { get; set; }
         private int speedOfSnowflake;
-        public int sizeOfSnowflake { get;}
+        public int SizeOfSnowflake { get; set; }
 
         public Snowflake()
         {
             var randomNumber = new Random();
             X = randomNumber.Next(0, 1920);
             Y = randomNumber.Next(-500, -200);
-            sizeOfSnowflake = randomNumber.Next(9, 20);
-            speedOfSnowflake = 40 / sizeOfSnowflake;
+            SizeOfSnowflake = randomNumber.Next(9, 20);
+            speedOfSnowflake = 40 / SizeOfSnowflake;
         }
         public void FallingSnowflake()
         {
@@ -29,10 +29,17 @@ namespace Snowfall
             }
             else
             {
-                Y = -30;
-                var randomNumber = new Random();
-                X = randomNumber.Next(0, 1920);
+                ChangingSnowflake();
             }
+        }
+        private void ChangingSnowflake()
+        {
+            var randomNumber = new Random();
+            X = randomNumber.Next(0, 1920);
+            Y = -30;
+            SizeOfSnowflake = randomNumber.Next(9, 20);
+            speedOfSnowflake = 40 / SizeOfSnowflake;
+
         }
     }
 }
