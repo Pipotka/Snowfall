@@ -35,7 +35,7 @@
             // 
             // SnowTimer
             // 
-            SnowTimer.Interval = 31;
+            SnowTimer.Interval = 16;
             SnowTimer.Tick += SnowTimerTick;
             // 
             // SnowfallForm
